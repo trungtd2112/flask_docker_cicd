@@ -41,7 +41,7 @@ jobs:
           echo "::set-output name=tag::$NEXT_TAG"
           echo "Next version: $NEXT_TAG"
 
-      #################################################################
+      ################################################################
       ###                     CREATE RELEASE                       ###
       ###  Creating release with the tag from the previous step    ###
       ################################################################
@@ -67,7 +67,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-1
+          aws-region: us-east-1
 
       - name: Login to Amazon ECR
         id: login-ecr
