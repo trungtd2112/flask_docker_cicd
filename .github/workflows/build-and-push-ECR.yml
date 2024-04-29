@@ -121,6 +121,8 @@ jobs:
           echo "$EC2_PEM_KEY" > ec2.pem
           chmod 400 ec2.pem
 
+          echo "chào Trung"
+
           # SSH, SCP commands
           SSH_COMMAND="ssh -i ec2.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST"
           SCP_COMMAND="scp -i ec2.pem -o StrictHostKeyChecking=no"
