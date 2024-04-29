@@ -118,7 +118,8 @@ jobs:
           IMAGE_TAG: ${{ steps.next_version.outputs.tag }}
         run: |
           # Save PEM key to file and set permissions
-          echo $EC2_PEM_KEY
+          echo $EC2_USER
+          echo $EC2_HOST
           echo "$EC2_PEM_KEY" > ec2.pem
           chmod 400 ec2.pem
 
