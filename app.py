@@ -47,7 +47,7 @@ def handle_request():
         return f"POST requests counter updated. Current count: {counter}"
     else:
         # For GET requests, just return the current count.
-        return f"Current POST requests count 1234: {counter}"
+        return f"Current POST requests count Trung: {counter}"
 
 @app.route('/health', methods=['GET'])
 def health_check():
