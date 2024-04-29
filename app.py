@@ -47,7 +47,7 @@ def handle_request():
         return f"POST requests counter updated. Current count: {counter}"
     else:
         # For GET requests, just return the current count.
-        return f"Hello! Current POST requests count: {counter}"
+        return f"Current POST requests count: {counter}"
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -61,7 +61,7 @@ def health_check():
     try:
         # Basic health check: Ensure the counter file is accessible.
         read_counter()
-        return jsonify({"status": "healthy"}), 200
+        return jsonify({"status": "Hello! healthy"}), 200
     except Exception as e:
         # Return an unhealthy status if any error occurs, e.g., file access issues.
         return jsonify({"status": "unhealthy", "reason": str(e)}), 500
